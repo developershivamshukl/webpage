@@ -1,0 +1,1107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Design Agency Complete</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      font-size: 16px;
+    }
+
+    /* Navigation */
+    .navbar-brand, .nav-link {
+      color: white !important;
+      margin-left: 0; /* Remove fixed margin */
+    }
+
+    .navbar-brand {
+      padding-left: 15px;
+    }
+
+    .nav-link {
+      padding: 10px 15px;
+    }
+
+    /* Hero Section Styles */
+    .hero-section {
+      background-color: #27293d;
+      color: white;
+      padding: 80px 0;
+    }
+
+    .hero-title {
+      font-size: 4.5rem;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      opacity: 0.8;
+      margin-bottom: 30px;
+      max-width: 100%;
+    }
+
+    .contact-btn {
+      background-color: #ff5e14;
+      color: white !important;
+      border-radius: 30px;
+      padding: 10px 25px !important;
+      font-weight: 600;
+    }
+
+    .work-btn {
+      background-color: transparent;
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 30px;
+      padding: 12px 30px;
+      font-weight: 600;
+      margin-right: 15px;
+    }
+
+    .contact-btn-hero {
+      background-color: #ff5e14;
+      color: white;
+      border-radius: 30px;
+      padding: 12px 30px;
+      font-weight: 600;
+      border: none;
+    }
+
+    .quote-text {
+      font-style: italic;
+      opacity: 0.7;
+      margin-top: 20px;
+      position: relative;
+      padding-left: 20px;
+      font-size: 1rem;
+    }
+
+    .quote-text::before {
+      content: '"';
+      position: absolute;
+      left: 0;
+      top: -10px;
+      font-size: 30px;
+    }
+
+    /* About Section */
+    .about-section {
+      background-color: #fceee7;
+      color: #3a1b00;
+      padding: 50px 0;
+    }
+
+    .section-title {
+      color: #f35b4f;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .heading {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .feature-box {
+      border: 1px solid #f5d8ca;
+      padding: 1rem;
+      text-align: center;
+      min-height: auto;
+      background-color: white;
+      border-radius: 0.5rem;
+    }
+
+    .feature-box h4 {
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .about-btn {
+      background: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .video-section {
+      margin-top: 40px;
+    }
+
+    .video-thumbnail {
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .video-thumbnail img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60px;
+      height: 60px;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .play-button::after {
+      content: "";
+      border-style: solid;
+      border-width: 10px 0 10px 16px;
+      border-color: transparent transparent transparent #3a1b00;
+      display: inline-block;
+      margin-left: 4px;
+    }
+
+    .video-time {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background-color: #3a1b00;
+      color: white;
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    /* Portfolio Section */
+    .portfolio-section {
+      background-color: #1e213c;
+      color: white;
+      padding: 50px 0;
+    }
+
+    .portfolio-item {
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+    }
+
+    .portfolio-item .label {
+      background-color: white;
+      color: black;
+      font-size: 12px;
+      border-radius: 20px;
+      padding: 5px 10px;
+      font-weight: bold;
+    }
+
+    .portfolio-item h5 {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .explore-btn {
+      display: block;
+      margin: 30px auto;
+      background-color: transparent;
+      color: white;
+      border: 1px solid white;
+      border-radius: 5px;
+      padding: 8px 20px;
+      font-size: 12px;
+    }
+
+    /* Team Section */
+    .team-section {
+      background-color: #1e213c;
+      color: white;
+      padding: 50px 0;
+    }
+
+    .banner {
+      background-color: #ffece4;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .team-title {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .team-member {
+      background-color: #2b2d42;
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: center;
+      color: #fff;
+    }
+
+    .team-img-placeholder {
+      width: 100%;
+      height: 200px;
+      background-color: #2b2d42;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .team-img-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .carousel-dots {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .dot {
+      height: 10px;
+      width: 10px;
+      margin: 0 4px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .dot.active {
+      background-color: #f35c5c;
+    }
+
+    /* Pricing Section */
+    .pricing-section {
+      background-color: #fbeee8;
+      padding: 50px 0;
+    }
+
+    .pricing-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      padding: 1.5rem;
+      text-align: left;
+    }
+
+    .pricing-card.popular {
+      border: 2px solid #f35c5c;
+    }
+
+    .popular-badge {
+      background-color: #f35c5c;
+      color: white;
+      font-size: 0.7rem;
+      padding: 2px 10px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .check-list li {
+      list-style: none;
+      margin-bottom: 0.5rem;
+      position: relative;
+      padding-left: 24px;
+      font-size: 0.9rem;
+    }
+
+    .check-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 4px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #d8d8d8;
+    }
+
+    .check-list li.active::before {
+      background: #f35c5c;
+    }
+
+    .btn-custom {
+      background-color: #f35c5c;
+      color: white;
+      border: none;
+    }
+
+    .btn-custom:hover {
+      background-color: #d94c4c;
+    }
+
+    .accordion-button:not(.collapsed) {
+      background-color: #fff;
+      color: #000;
+    }
+
+    /* Contact & Footer */
+    .contact-section {
+      position: relative;
+      background-image: url('map.png');
+      background-size: contain;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 1.5rem;
+    }
+
+    .contact-box {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+    }
+
+    .btn-submit {
+      background-color: #f35c5c;
+      color: white;
+      border: none;
+      width: 100%;
+    }
+
+    .btn-submit:hover {
+      background-color: #d94c4c;
+    }
+
+    .footer {
+      background-color: #fbeee8;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    .footer-logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .footer h6 {
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      margin-bottom: 1rem;
+      color: #f35c5c;
+    }
+
+    .footer a {
+      display: block;
+      color: black;
+      text-decoration: none;
+      margin-bottom: 0.3rem;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .social-icons a {
+      color: white;
+      background: #f35c5c;
+      border-radius: 50%;
+      padding: 8px 10px;
+      margin-right: 0.5rem;
+      display: inline-block;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #e0c7b9;
+      padding-top: 1rem;
+      margin-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+    }
+
+    .img1 {
+      background-color: #fceee7;
+      width: 100%;
+      height: auto;
+    }
+
+    /* Media Queries */
+
+    /* Mobile View (≤576px) */
+    @media (max-width: 576px) {
+      /* Navigation */
+      .navbar-nav {
+        text-align: center;
+      }
+      .nav-link {
+        margin-left: 0;
+        padding: 12px 0;
+        font-size: 1rem;
+      }
+      .contact-btn {
+        margin: 10px auto;
+        display: block;
+        width: fit-content;
+      }
+
+      /* Hero Section */
+      .hero-section {
+        padding: 30px 0;
+        text-align: center;
+      }
+      .hero-title {
+        font-size: 2rem;
+        margin-bottom: 15px;
+      }
+      .hero-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+      }
+      .work-btn, .contact-btn-hero {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        font-size: 0.85rem;
+      }
+      .quote-text {
+        font-size: 0.9rem;
+        padding-left: 15px;
+      }
+      .hero-section img {
+        margin-top: 20px;
+        max-width: 100%;
+      }
+
+      /* About Section */
+      .about-section {
+        padding: 30px 0;
+      }
+      .heading {
+        font-size: 1.5rem;
+      }
+      .feature-box {
+        padding: 0.75rem;
+      }
+      .feature-box h4 {
+        font-size: 1.2rem;
+      }
+      .about-btn {
+        width: 100%;
+        padding: 8px;
+      }
+      .video-section {
+        margin-top: 40px;
+      }
+      .video-thumbnail {
+        margin-bottom: 20px;
+      }
+
+      /* Portfolio Section */
+      .portfolio-section {
+        padding: 50px 0;
+      }
+      .portfolio-item {
+        height: 150px;
+      }
+      .category-nav {
+        font-size: 0.85rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .explore-btn {
+        padding: 6px 15px;
+        font-size: 0.8rem;
+      }
+
+      /* Team Section */
+      .team-section {
+        padding: 50px 0;
+      }
+      .team-title {
+        font-size: 1.5rem;
+      }
+      .banner {
+        padding: 1.5rem;
+        text-align: center;
+      }
+      .banner-right {
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .banner-img, .block-img, .path-img {
+        max-width: 80%;
+      }
+      .team-member {
+        margin-bottom: 20px;
+      }
+      .team-img-placeholder {
+        height: 200px;
+      }
+
+      /* Pricing Section */
+      .pricing-section {
+        padding: 50px 0;
+      }
+      .pricing-card {
+        padding: 1.5rem;
+      }
+      .pricing-card h3 {
+        font-size: 1.5rem;
+      }
+      .check-list li {
+        font-size: 0.9rem;
+      }
+      .accordion-button {
+        font-size: 0.9rem;
+      }
+
+      /* Contact Section */
+      .contact-section {
+        height: 500px;
+        padding: 1.5rem;
+      }
+      .contact-box {
+        max-width: 100%;
+        padding: 1.5rem;
+      }
+
+      /* Footer */
+      .footer {
+        padding: 2rem 1rem;
+        text-align: center;
+      }
+      .footer-logo {
+        font-size: 1rem;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .social-icons {
+        text-align: center;
+        margin-top: 15px;
+      }
+    }
+
+    /* Laptop View (≥992px) */
+    @media (min-width: 992px) {
+      /* Navigation */
+      .navbar-brand {
+        margin-left: 20px;
+      }
+      .nav-link {
+        margin-left: 30px;
+        font-size: 1rem;
+      }
+
+      /* Hero Section */
+      .hero-section {
+        padding: 80px 0;
+      }
+      .hero-title {
+        font-size: 4.5rem;
+      }
+      .hero-subtitle {
+        font-size: 1.1rem;
+        max-width: 500px;
+      }
+      .work-btn, .contact-btn-hero {
+        padding: 12px 30px;
+        font-size: 1rem;
+      }
+
+      /* About Section */
+      .about-section {
+        padding: 100px 0;
+      }
+      .heading {
+        font-size: 2rem;
+      }
+      .feature-box {
+        padding: 1.5rem;
+      }
+      .feature-box h4 {
+        font-size: 1.5rem;
+      }
+
+      /* Portfolio Section */
+      .portfolio-section {
+        padding: 100px 0;
+      }
+      .portfolio-item {
+        height: 250px;
+      }
+      .category-nav {
+        font-size: 1rem;
+      }
+
+      /* Team Section */
+      .team-section {
+        padding: 100px 0;
+      }
+      .team-title {
+        font-size: 2rem;
+      }
+      .banner {
+        padding: 2rem;
+      }
+      .banner-img, .block-img {
+        max-width: 100%;
+      }
+
+      /* Pricing Section */
+      .pricing-card h3 {
+        font-size: 1.8rem;
+      }
+      .check-list li {
+        font-size: 1rem;
+      }
+
+      /* Contact Section */
+      .contact-box {
+        max-width: 400px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg hero-section">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="assest/logo.png" alt="Logo" class="img-fluid"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+          <li class="nav-item"><a class="nav-link contact-btn" href="#">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-center text-lg-start">
+          <h5>MODERN STUDIO</h5>
+          <h1 class="hero-title">We're Help<br>To Build Your<br>Dream Project</h1>
+          <p class="hero-subtitle">Agency provides a full service range including technical skills, design, business understanding.</p>
+          <div class="d-flex flex-column flex-lg-row">
+            <button class="work-btn mb-2 mb-lg-0">HOW WE WORK</button>
+            <button class="contact-btn-hero">Contact Us</button>
+          </div>
+          <p class="quote-text">themselves in the merchant's shoes</p>
+        </div>
+        <div class="col-lg-6">
+          <img src="assest/pic.png" class="img-fluid" alt="Hero Image" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <img class="img1" src="assest/logo1.png" alt="Logo" loading="lazy">
+  <section class="about-section">
+    <div class="container py-5 mt-5">
+      <div class="row mb-5 justify-content-center align-items-center">
+        <div class="col-lg-5">
+          <div class="image-card">
+            <img src="assest/pic 1.png" alt="Office Scene" class="img-fluid rounded shadow" loading="lazy" />
+          </div>
+        </div>
+        <div class="col-lg-6 text-center text-lg-start">
+          <p class="section-title">About</p>
+          <h2 class="heading">An Experience<br>Design Agency</h2>
+          <p class="fw-semibold mt-3">Provides a full service range</p>
+          <p class="text-muted">Ability to put themselves in the merchant's shoes. It is meant to partner on the long run, and work as an extension of the merchant's team.</p>
+          <button class="about-btn">ABOUT US</button>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="row text-center mt-5">
+        <div class="col-12 col-md-4 mb-3">
+          <div class="feature-box">
+            <h4>42%</h4>
+            <p class="text-muted mb-0">Years of experience</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 mb-3">
+          <div class="feature-box">
+            <h4>73+</h4>
+            <p class="text-muted mb-0">Agency members</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 mb-3">
+          <div class="feature-box">
+            <h4>5,000</h4>
+            <p class="text-muted mb-0">Projects complete</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How We Work & Video Section -->
+  <section class="about-section">
+    <div class="container py-5">
+      <div class="row align-items-start">
+        <div class="col-lg-6 mb-4 text-center text-lg-start">
+          <p class="section-title">HOW WE WORK</p>
+          <h2 class="heading">Making Your Projects<br>Look Awesome</h2>
+          <p>Technical skills, design, business understanding, ability to put themselves in the merchant's shoes.</p>
+          <a href="#" class="fw-bold text-decoration-none text-dark">Read More</a>
+        </div>
+        <div class="col-lg-6">
+          <div class="row">
+            <div class="col-12 mb-3 d-flex align-items-start">
+              <h1 class="me-3">1</h1>
+              <div><strong>Full service range including</strong></div>
+            </div>
+            <div class="col-12 mb-3 d-flex align-items-start">
+              <h1 class="me-3">2</h1>
+              <div><strong>Technical skills, design, business</strong></div>
+            </div>
+            <div class="col-12 mb-3 d-flex align-items-start">
+              <h1 class="me-3">3</h1>
+              <div><strong>Themselves in the merchant's</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-5" />
+
+      <div class="row align-items-center video-section">
+        <div class="col-lg-6 mb-4">
+          <div class="video-thumbnail">
+            <img src="assest/Bitmap2.png" alt="Video Preview" loading="lazy" />
+            <div class="play-button"></div>
+            <div class="video-time">1:45</div>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center text-lg-start">
+          <p class="section-title">VIDEO REEL</p>
+          <h2 class="heading">Unlock The Greatest<br>Value Possible</h2>
+          <p>Design, business understanding, ability to put themselves in the merchant's shoes meant to partner.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="portfolio-section">
+    <div class="container">
+      <div class="section-title text-center">
+        <p class="text-danger">PORTFOLIO</p>
+        <h1 class="fw-bold">Latest Work</h1>
+      </div>
+      <div class="category-nav text-center">
+        Show All <sup>4</sup> &nbsp; Design <sup>1</sup> &nbsp; Branding <sup>1</sup> &nbsp; Illustration <sup>1</sup> &nbsp; Motion <sup>1</sup>
+      </div>
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="portfolio-item" style="background-image: url('assest/sofa.png');">
+            <div>
+              <span class="label">Design</span>
+              <h5>SOFA</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="portfolio-item" style="background-image: url('assest/keyboard.png');">
+            <div>
+              <span class="label">Branding</span>
+              <h5>KeyBoard</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="portfolio-item" style="background-image: url('assest/work media.png');">
+            <div>
+              <span class="label">Illustration</span>
+              <h5>Work Media</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="portfolio-item" style="background-image: url('assest/dddone.png');">
+            <div>
+              <span class="label">Motion</span>
+              <h5>DDDone</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="explore-btn">EXPLORE MORE</button>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team-section">
+    <div class="container">
+      <div class="banner d-flex align-items-center justify-content-between flex-wrap">
+        <img src="icon.png" alt="Gift Icon" class="icon-img img-fluid" loading="lazy" />
+        <div class="mb-4 mb-md-0 text-center text-md-start">
+          <div class="mb-2 text-danger fw-bold">GET STARTED</div>
+          <h4 class="text-dark fw-bold">We Help Companies Move Faster</h4>
+          <button class="btn btn-danger mt-2">Contact Us</button>
+        </div>
+        <div class="d-flex align-items-center flex-wrap banner-right">
+          <img src="assest/block.png" alt="Growth Chart" class="block-img img-fluid" loading="lazy" />
+          <img src="assest/Path.png" alt="Cloud Shape" class="path-img img-fluid" loading="lazy" />
+          <img src="assest/Bitmap3.png" alt="Woman" class="banner-img img-fluid" loading="lazy" />
+        </div>
+      </div>
+      <div class="mb-4 text-center text-md-start">
+        <small class="text-danger">OUR TEAM</small>
+        <h2 class="team-title">Team of Designers<br />and Developers</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-12 col-md-3">
+          <div class="team-member">
+            <div class="team-img-placeholder"><img src="assest/Bitmap 1.1.png" alt="Azah Anyeni" loading="lazy"></div>
+            <h5>Azah Anyeni</h5>
+            <small>Designer</small>
+          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="team-member">
+            <div class="team-img-placeholder"><img src="assest/Bitmap1.2.png" alt="Roelof Bekkenenks" loading="lazy"></div>
+            <h5>Roelof Bekkenenks</h5>
+            <small>React Developer</small>
+          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="team-member">
+            <div class="team-img-placeholder"><img src="assest/Bitmap1.3.png" alt="Leonardo Oliveira" loading="lazy"></div>
+            <h5>Leonardo Oliveira</h5>
+            <small>Illustrator</small>
+          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="team-member">
+            <div class="team-img-placeholder"><img src="assest/Bitmap1.4.png" alt="Izabella Tabakova" loading="lazy"></div>
+            <h5>Izabella Tabakova</h5>
+            <small>Product Designer</small>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-dots mt-4">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing-section">
+    <div class="container py-5">
+      <div class="mb-5 text-center text-md-start">
+        <div class="section-title">Pricing</div>
+        <h2 class="mb-4">Check Our<br>Pricing Plans</h2>
+        <div class="row g-4">
+          <div class="col-12 col-md-4">
+            <div class="pricing-card text-dark">
+              <div class="text-uppercase text-danger fw-bold mb-2">Consultation</div>
+              <h3 class="fw-bold">Free</h3>
+              <p>Your digital marketing efforts, instead of handling in-house.</p>
+              <ul class="check-list ps-0">
+                <li class="active">Brand Design</li>
+                <li>Market Analysis</li>
+                <li>Production</li>
+              </ul>
+              <button class="btn btn-outline-dark mt-3">Contact Us</button>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="pricing-card text-dark popular">
+              <span class="popular-badge">Popular</span>
+              <div class="text-uppercase text-danger fw-bold mb-2">Design</div>
+              <h3 class="fw-bold">$1500</h3>
+              <p>Provide your business with a variety of digital solutions to promote.</p>
+              <ul class="check-list ps-0">
+                <li class="active">Brand Design</li>
+                <li class="active">Market Analysis</li>
+                <li>Production</li>
+              </ul>
+              <button class="btn btn-custom mt-3">Contact Us</button>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="pricing-card text-dark">
+              <div class="text-uppercase text-danger fw-bold mb-2">Design + Code</div>
+              <h3 class="fw-bold">$2900</h3>
+              <p>Help you hit your marketing goals and grow your business.</p>
+              <ul class="check-list ps-0">
+                <li class="active">Brand Design</li>
+                <li class="active">Market Analysis</li>
+                <li class="active">Production</li>
+              </ul>
+              <button class="btn btn-outline-dark mt-3">Contact Us</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-12 col-md-6 text-center text-md-start">
+          <div class="section-title">FAQ</div>
+          <h2 class="mb-3">Frequently Asked<br>Questions</h2>
+          <p>A digital agency is a business you hire to outsource your digital marketing efforts, instead of handling in-house.</p>
+          <a href="#" class="text-danger">Contact Us</a>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                  A digital agency is a business
+                </button>
+              </h2>
+              <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Digital marketing efforts, instead of handling in-house. They can provide your business with a variety of digital solutions to promote your product or service online and help you hit your marketing goals and grow your business.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                  Hire to outsource your digital
+                </button>
+              </h2>
+              <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes, outsourcing allows your company to focus on core business areas while experts handle your digital presence.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                  Marketing efforts
+                </button>
+              </h2>
+              <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  We assist with SEO, social media, content creation, ads, and more to optimize your online performance.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+                  Can provide your business
+                </button>
+              </h2>
+              <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes, we provide complete branding, strategy, and implementation to scale your business digitally.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Footer Section -->
+  <div class="contact-section">
+    <div class="contact-box">
+      <h5 class="fw-bold mb-3">Get In Touch</h5>
+      <form>
+        <div class="mb-3">
+          <input type="email" class="form-control" placeholder="Your email">
+        </div>
+        <div class="mb-3">
+          <select class="form-select">
+            <option selected disabled>Subject</option>
+            <option value="1">General Inquiry</option>
+            <option value="2">Support</option>
+            <option value="3">Feedback</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" rows="4" placeholder="Message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-submit">SUBMIT NOW</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 mb-4 text-center text-md-start">
+          <div class="footer-logo">Agency</div>
+        </div>
+        <div class="col-12 col-md-4 mb-4 text-center text-md-start">
+          <h6>Menu</h6>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="col-12 col-md-4 mb-4 text-center text-md-start">
+          <h6>Service</h6>
+          <a href="#">Design</a>
+          <a href="#">Development</a>
+          <a href="#">Marketing</a>
+          <a href="#">See More</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2022 Lasiq. All Rights Reserved.</div>
+        <div>
+          <a href="#" class="me-3">Terms of Use</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+      <div class="text-center text-md-end mt-2 social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+</body>
+</html>
+
+
